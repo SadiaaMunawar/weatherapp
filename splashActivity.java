@@ -1,0 +1,19 @@
+package com.example.weatherapp;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+
+public class splashActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash);
+
+        new Handler().postDelayed(() -> {
+            startActivity(new Intent(splashActivity.this, MainActivity.class));
+            finish();
+        }, 1500);
+    }
+}
